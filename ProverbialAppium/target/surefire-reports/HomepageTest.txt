@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------
+Test set: HomepageTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.223 s <<< FAILURE! -- in HomepageTest
+HomepageTest.testAppOpen -- Time elapsed: 1.174 s <<< ERROR!
+io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException: 
+Appium HTTP server has started and is listening although we were unable to get an OK response from http://127.0.0.1:4723/status. Make sure both the client and the server use the same base path '/' and check the server log for possible error messages occurrences.
+Response status code: 404
+Response payload: {"status":9,"value":{"error":"unknown command","message":"The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource","stacktrace":""}}
+Node.js executable path: C:\Program Files\nodejs\node.exe
+Arguments: [C:\Users\Student-Day-1\AppData\Roaming\npm\node_modules\appium\build\lib\main.js, --port, 4723, --address, 0.0.0.0]
+	at io.appium.java_client.service.local.AppiumDriverLocalService.start(AppiumDriverLocalService.java:193)
+	at Base.setUp(Base.java:25)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: io.appium.java_client.service.local.AppiumServerAvailabilityChecker$ConnectionError: ConnectionError
+	at io.appium.java_client.service.local.AppiumServerAvailabilityChecker.checkResponse(AppiumServerAvailabilityChecker.java:91)
+	at io.appium.java_client.service.local.AppiumServerAvailabilityChecker.waitUntilAvailable(AppiumServerAvailabilityChecker.java:62)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.ping(AppiumDriverLocalService.java:145)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.start(AppiumDriverLocalService.java:186)
+	... 4 more
+
